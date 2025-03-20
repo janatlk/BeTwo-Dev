@@ -27,17 +27,34 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name="index"
+        name="articles"
         options={{
-          title: 'Home',
+          title: '1',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      /><Tabs.Screen
+        name="widgets"
+        options={{
+          title: '2',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
-      />
-      <Tabs.Screen
-        name="explore"
+      /><Tabs.Screen
+        name="index"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: '3 страница',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+        }}
+      /><Tabs.Screen
+        name="chats"
+        options={{
+          title: '4 страница',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+        }}
+      /><Tabs.Screen
+        name="diary"
+        options={{
+          title: '5 страница',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
     </Tabs>
