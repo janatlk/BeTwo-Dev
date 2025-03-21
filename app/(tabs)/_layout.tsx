@@ -29,32 +29,32 @@ export default function TabLayout() {
       <Tabs.Screen
         name="articles"
         options={{
-          title: '1',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Статьи',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="document" color={color} />,
         }}
       /><Tabs.Screen
         name="widgets"
         options={{
-          title: '2',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Виджеты',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="apps.iphone" color={color} />,
         }}
       /><Tabs.Screen
-        name="index"
+        name="home"
         options={{
-          title: '3 страница',
+          title: 'Дом',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       /><Tabs.Screen
         name="chats"
         options={{
-          title: '4 страница',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Чаты',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="message" color={color} />,
         }}
       /><Tabs.Screen
         name="diary"
         options={{
-          title: '5 страница',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Дневник',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="smiley" color={color} />,
         }}
       />
     </Tabs>
