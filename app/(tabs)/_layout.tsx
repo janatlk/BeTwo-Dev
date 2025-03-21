@@ -3,7 +3,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { Ionicons } from '@expo/vector-icons';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -30,31 +30,31 @@ export default function TabLayout() {
         name="articles"
         options={{
           title: 'Статьи',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="document" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="document" color={color} />,
         }}
       /><Tabs.Screen
         name="widgets"
         options={{
           title: 'Виджеты',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="apps.iphone" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="apps" color={color} />,
         }}
       /><Tabs.Screen
         name="home"
         options={{
           title: 'Дом',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="home" color={color} />,
         }}
       /><Tabs.Screen
         name="chats"
         options={{
           title: 'Чаты',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="message" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="chatbubbles" color={color} />,
         }}
       /><Tabs.Screen
         name="diary"
         options={{
           title: 'Дневник',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="smiley" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="happy" color={color} />,
         }}
       />
     </Tabs>

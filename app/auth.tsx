@@ -1,13 +1,27 @@
-import { View, Text, Button } from "react-native";
-import { useRouter } from "expo-router";
+import 'react-native-url-polyfill/auto'
+import { useState, useEffect } from 'react'
+import { supabase } from '../lib/supabase'
+import Auth from '../components/auth/auth'
+import { View, Text } from 'react-native'
+import { Session } from '@supabase/supabase-js'
 
-export default function AuthScreen() {
-    const router = useRouter();
+export default function AuthPage() {
+    const [session, setSession] = useState<Session | null>(null)
+
+    useEffect(() => {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session)
+        })
+
+        supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session)
+        })
+    }, [])
 
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Text>Экран авторизации</Text>
-            <Button title="Войти" onPress={() => router.push("/(tabs)/home")} />
+        <View>
+            <Auth />
+            {session && session.user && <Text>{session.user.id}</Text>}
         </View>
-    );
+    )
 }
